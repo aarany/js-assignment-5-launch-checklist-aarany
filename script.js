@@ -1,8 +1,3 @@
-// Write your JavaScript code here!
-
-//const { myFetch, pickPlanet, addDestinationInfo, formSubmission } = require("./scriptHelper");
-// the alert only works when i comment out the const
-
 window.addEventListener("load", function() {
 
     let form = document.querySelector("form");
