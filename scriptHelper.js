@@ -49,18 +49,22 @@ function formSubmission(document, list, pilotInput, copilotInput, fuelLevelInput
         pilotStatus.innerHTML = `Pilot ${pilotInput} is ready for launch`;
         copilotStatus.innerHTML = `Co-pilot ${copilotInput} is ready for launch`;
         list.style.visibility = "visible";
-        launchStatus.style.color = "rgb(199, 37, 78)"; //changed from 'red' for the autograder
-        launchStatus.innerHTML = "Shuttle Not Ready for Launch";
-        
+
     // status updates and faultyitem updates
 
             if (Number(cargoLevelInput) > 10000 && Number(fuelLevelInput) < 10000) {
                 fuelStatus.innerHTML = "Fuel level too low for launch";
                 cargoStatus.innerHTML = "Cargo mass too heavy for launch";
+                launchStatus.style.color = "rgb(199, 37, 78)"; //changed from 'red' for the autograder
+                launchStatus.innerHTML = "Shuttle Not Ready for Launch";
             } else if (Number(fuelLevelInput) < 10000) {
                 fuelStatus.innerHTML = "Fuel level too low for launch";
+                launchStatus.style.color = "rgb(199, 37, 78)"; //changed from 'red' for the autograder
+                launchStatus.innerHTML = "Shuttle Not Ready for Launch";
             } else if (Number(cargoLevelInput) > 10000) {
                 cargoStatus.innerHTML = "Cargo mass too heavy for launch";
+                launchStatus.style.color = "rgb(199, 37, 78)"; //changed from 'red' for the autograder
+                launchStatus.innerHTML = "Shuttle Not Ready for Launch";
             } else if (Number(fuelLevelInput) > 10000 && Number(cargoLevelInput) < 10000) {
                 launchStatus.style.color = "rgb(65, 159, 106)"; //changed from 'green' for autograder
                 launchStatus.innerHTML = "Shuttle is Ready for Launch"
