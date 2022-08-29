@@ -65,10 +65,16 @@ function formSubmission(document, list, pilotInput, copilotInput, fuelLevelInput
                 cargoStatus.innerHTML = "Cargo mass too heavy for launch";
                 launchStatus.style.color = "rgb(199, 37, 78)"; //changed from 'red' for the autograder
                 launchStatus.innerHTML = "Shuttle Not Ready for Launch";
-            } else if (Number(fuelLevelInput) > 10000 && Number(cargoLevelInput) < 10000) {
+            } else {
                 launchStatus.style.color = "rgb(65, 159, 106)"; //changed from 'green' for autograder
                 launchStatus.innerHTML = "Shuttle is Ready for Launch"
             }
+            // } else if (Number(fuelLevelInput) > 10000 && Number(cargoLevelInput) < 10000) {
+            //     fuelStatus.innerHTML = "Fuel level high enough for launch";
+            //     cargoStatus.innerHTML = "Cargo mass low enough for launch"
+            //     launchStatus.style.color = "rgb(65, 159, 106)"; //changed from 'green' for autograder
+            //     launchStatus.innerHTML = "Shuttle is Ready for Launch"
+            // }
     }
 }
 
